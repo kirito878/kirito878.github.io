@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,39 +6,347 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>DeNVeR: Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation</title>
+    <title>DeNVeR</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="https://github.com/kirito878/kirito878.github.io/tree/master/DeNVeR/img/pipeline.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1296">
+    <meta property="og:image:height" content="840">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kirito878.github.io/DeNVeR/"/>
+    <meta property="og:title" content="DeNVeR: Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation" />
+    <meta property="og:description" content="This paper presents Deformable Neural Vessel Representations (DeNVeR), an unsupervised approach for vessel segmentation in X-ray videos without annotated ground truth. DeNVeR uses optical flow and layer separation, enhancing segmentation accuracy and adaptability through test-time training. A key component of our research is the introduction of the XACV dataset, the first X-ray angiography coronary video dataset with high-quality, manually labeled segmentation ground truth. Our evaluation demonstrates that DeNVeR outperforms current state-of-the-art methods in vessel segmentation. This paper marks an advance in medical imaging, providing a robust, data-efficient tool for disease diagnosis and treatment planning and setting a new standard for future research in video vessel segmentation." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DeNVeR: Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation" />
+    <meta name="twitter:description" content="This paper presents Deformable Neural Vessel Representations (DeNVeR), an unsupervised approach for vessel segmentation in X-ray videos without annotated ground truth. DeNVeR uses optical flow and layer separation, enhancing segmentation accuracy and adaptability through test-time training. A key component of our research is the introduction of the XACV dataset, the first X-ray angiography coronary video dataset with high-quality, manually labeled segmentation ground truth. Our evaluation demonstrates that DeNVeR outperforms current state-of-the-art methods in vessel segmentation. This paper marks an advance in medical imaging, providing a robust, data-efficient tool for disease diagnosis and treatment planning and setting a new standard for future research in video vessel segmentation." />
+    <meta name="twitter:image" content="https://github.com/kirito878/kirito878.github.io/tree/master/DeNVeR/img/pipeline.jpg" />
+
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/fontawesome.all.min.css">
+	<link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZERS5BVPS"></script>
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-8ZERS5BVPS');
+  </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script defer src="js/fontawesome.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/video_comparison.js"></script>
+    <script src="js/synced_video_selector.js"></script>
 </head>
 
-<body style="padding: 5%; padding-top: min(15px, 5%); padding-bottom: min(5px, 5%); width: 100%">
-    <div class="container-lg text-center" style="max-width: 1500px; margin: auto;" id="main">
-        <header role="banner">
-            <!-- <div class="container" id="main"> -->
-            <div class="row">
-                <h2 class="col-md-12 text-center">
-                    <b>DeNVeR:</b> Deformable Neural Vessel Representations for Unsupervised Video Vessel
-                    Segmentation</br>
-                </h2>
-            </div>
-    </div>
-    </header>
-    </main>
-    <footer>
+<body style="padding: 1%; width: 100%">
+    <div class="container" style="max-width: 1500px; margin: auto;" id="main">
         <div class="row">
-            <div class="col-md-8 offset-md-2 text-start">
+            <h2 class="col-md-12 text-center">
+                <b>DeNVeR</b>:<br>Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation</br> 
+                <!-- <small>
+                ICCV 2023 (Oral Presentation, Best Paper Finalist)
+                </small> -->
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="">
+                            Chun-Hung Wu¹
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Shih-Hong Chen¹
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Chih Yao Hu²
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Hsin-Yu Wu¹
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Kai-Hsin Chen¹
+                        </a>
+                    </li><br>
+                    <li>
+                        <a href="">
+                            Yuyou-chen¹
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Chih-Hai Su¹
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Chih-Kuo Lee²
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://yulunalexliu.github.io/">
+                            Yu-Lun Liu¹
+                        </a>
+                    </li>
+                    </br>¹National Yang Ming Chiao Tung University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;²National Taiwan University
+                </ul>
+            </div>
+        </div>
 
-                <p class="text-justify" style="text-align: left;">
-                    <i>
-                        The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>,
-                        <a href="https://cat3d.github.io/">CAT3D</a>,
-                        <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>, and <a
-                            href="https://reconfusion.github.io">ReconFusion</a>.
-                    </i>
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="">
+                            <image src="img/denver_paper_image.jpg" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" target="popup" onclick="window.open('','popup','width=600,height=400')">
+                            <image src="img/database_icon.png" height="60px">
+                                <h4><strong>XACV Dataset<br>[coming soon]</strong></h4>
+                            </a>							
+                        </li>
+                        <li>
+                            <a href="">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code [coming soon]</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="img/teaser.mp4" type="video/mp4" />
+                </video>
+						</div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    This paper presents <b>De</b>formable <b>N</b>eural <b>Ve</b>ssel <b>R</b>epresentations (<b>DeNVeR</b>), an unsupervised approach for vessel segmentation in X-ray videos without annotated ground truth. DeNVeR uses optical flow and layer separation, enhancing segmentation accuracy and adaptability through test-time training. A key component of our research is the introduction of the XACV dataset, the first X-ray angiography coronary video dataset with high-quality, manually labeled segmentation ground truth. Our evaluation demonstrates that DeNVeR outperforms current state-of-the-art methods in vessel segmentation. This paper marks an advance in medical imaging, providing a robust, data-efficient tool for disease diagnosis and treatment planning and setting a new standard for future research in video vessel segmentation.
                 </p>
             </div>
         </div>
 
-    </footer>
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Vessel segmentation methods
+                </h3>
+                <image src="img/motivation.jpg" width=90% style="display: block; margin: auto;"></image>
+                <!-- <br> -->
+                <p class="text-justify">
+                    Existing self-supervised methods such as SSVS, DARL, and FreeCOS require extensive X-ray images for training, which limits their ability to generalize to new data. Our method overcomes this limitation by leveraging <i>unsupervised test-time training</i> directly on <i>testing videos</i>, eliminating the need for a large annotated dataset. Our approach demonstrates superior segmentation accuracy with finer and more consistent vessel contours, showcasing its robust generalization capabilities with minimal training data.
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    DeNVeR pipeline
+                </h3>
+                <image src="img/pipeline.jpg" width=100% style="display: block; margin: auto;"></image>
+                <!-- <br> -->
+                <p class="text-justify">
+                    In the preprocessing phase (a), we apply a Hessian-based technique complemented by region growing for frame-specific vessel segmentation. Subsequently, in (b) Stage 1, Multi-Layer Perceptrons (MLPs) are employed to model both the background deformation fields and a canonical background image, establishing a baseline devoid of vessel structures via a reconstruction loss criterion. Finally, in (c) Stage 2, the canonical background is held constant while we refine the canonical foreground vessel image, per-frame vessel masks, and their respective motions. This involves the utilization of B-spline parameters to capture vessel and background movement, followed by a warping process that merges the foreground and background layers to reconstruct the frames. The reconstruction loss is minimized to ensure fidelity to the original input frames. This entire pipeline is trained directly on test videos without the need for ground truth segmentation masks.
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Eulerian motion field modeling
+                </h3>
+                <image src="img/eulerian.jpg" width=50% style="display: block; margin: auto;"></image>
+                <p class="text-justify">
+                    We model the background heartbeat motion using a B-spline with a lower degree of freedom, while the foreground vessel flow is modeled with a stationary Eulerian motion field that does not vary with time. However, the observed vessel motions from the X-ray videos are from both these factors. Therefore, we obtain the final vessel flow by warping the Eulerian motion with the background flow and then adding the background motion to it.
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Parallel vessel motion loss
+                </h3>
+                <image src="img/parallel.jpg" width=50% style="display: block; margin: auto;"></image>
+                <p class="text-justify">
+                    The vessel's flow direction should align with the travel direction of the vessel mask, leading us to design a parallel vessel motion loss. We apply skeletonization and distance transform to the preprocessed vessel mask to determine the gradient direction at each location. The predicted vessel motion must be perpendicular to these gradients, as shown by the blue arrows.
+                </p>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    XACV dataset
+                </h3>
+                <div class="row">
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/XCAD_00897.jpg" height="125px">
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/XCAD_00897_mask.jpg" height="125px">
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/rgb_p1v10_00031.jpg" height="125px">
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/noGT.jpg" height="125px">
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00050.jpg" height="125px"">
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00050_mask.jpg" height="125px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/XCAD_17817.jpg" height="125px">
+                        Image
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/XCAD_17817_mask.jpg" height="125px">
+                        Ground truth
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/rgb_p2_v11_00029.jpg" height="125px">
+                        Video frame
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/noGT.jpg" height="125px">
+                        Ground truth
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00074.jpg" height="125px">
+                        Video frame
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00074_mask.jpg" height="125px">
+                        Ground truth
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <a href="https://github.com/AISIGSJTU/SSVS"><b>XCAD</b></a>
+                    </div>
+                    <div class="col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <a href="https://data.mendeley.com/datasets/p9bpx9ctcv/2"><b>CADICA</b></a>
+                    </div>
+                    <div class="col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <b>Our XACV dataset</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Visual results
+                </h3>
+                <image src="img/results.jpg" width=100% style="display: block; margin: auto;"></image>
+                <!-- <p class="text-justify">
+                    The vessel's flow direction should align with the travel direction of the vessel mask, leading us to design a parallel vessel motion loss. We apply skeletonization and distance transform to the preprocessed vessel mask to determine the gradient direction at each location. The predicted vessel motion must be perpendicular to these gradients, as shown by the blue arrows.
+                </p> -->
+            </div>
+        </div>
+
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{wu2024denver,
+    title={DeNVeR: Deformable Neural Vessel Representations for 
+           Unsupervised Video Vessel Segmentation},
+    author={Chun-Hung Wu and Shih-Hong Chen and Chih Yao Hu and Hsin-Yu Wu and 
+            Kai-Hsin Chen and Yuyou-chen and Chih-Hai Su and Chih-Kuo Lee and 
+            Yu-Lun Liu},
+    journal={arXiv},
+    year={2024}
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                This research was funded by the National Science and Technology Council, Taiwan, under Grants NSTC 112-2222-E-A49-004-MY2. The authors are grateful to Google, NVIDIA, and MediaTek Inc. for generous donations. Yu-Lun Liu acknowledges the Yushan Young Fellow Program by the MOE in Taiwan.
+                    <br><br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>.
+                </p>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
