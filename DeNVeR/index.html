@@ -38,6 +38,11 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="css/bulma-slider.min.css">
+
     <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZERS5BVPS"></script>
   <script>
@@ -48,7 +53,8 @@
 	gtag('config', 'G-8ZERS5BVPS');
   </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
@@ -60,7 +66,17 @@
 
     <script src="js/app.js"></script>
     <script src="js/video_comparison.js"></script>
-    <script src="js/synced_video_selector.js"></script>
+    <script src="js/bulma-carousel.min.js"></script>
+    <script src="js/bulma-slider.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- <script src="js/synced_video_selector.js"></script> -->
+
+    <!-- <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/codemirror.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/app.js"></script> -->
 </head>
 
 <body style="padding: 1%; width: 100%">
@@ -168,6 +184,127 @@
 						</div>
         </div> -->
 
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="video-compare-container" id="materialsDiv">
+                    <video class="video" id="materials" loop playsinline autoPlay muted src="img/potatoes_mask_comparison.mp4" onplay="resizeAndPlay(this)"></video>
+                    <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
+                </div>
+			</div>
+        </div> -->
+
+        <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2828RAO2_CRA32Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2828RAO2_CRA32" loop playsinline autoPlay muted src="img/CVAI-2828RAO2_CRA32.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2828RAO2_CRA32Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2829RAO9_CRA37Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2829RAO9_CRA37" loop playsinline autoPlay muted src="img/CVAI-2829RAO9_CRA37.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2829RAO9_CRA37Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2829RAO14_CAU37Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2829RAO14_CAU37" loop playsinline autoPlay muted src="img/CVAI-2829RAO14_CAU37.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2829RAO14_CAU37Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2832RAO7_CAU29Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2832RAO7_CAU29" loop playsinline autoPlay muted src="img/CVAI-2832RAO7_CAU29.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2832RAO7_CAU29Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2840RAO10_CAU32Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2840RAO10_CAU32" loop playsinline autoPlay muted src="img/CVAI-2840RAO10_CAU32.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2840RAO10_CAU32Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2847LAO1_CRA32Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2847LAO1_CRA32" loop playsinline autoPlay muted src="img/CVAI-2847LAO1_CRA32.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2847LAO1_CRA32Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2855LAO26_CRA31Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2855LAO26_CRA31" loop playsinline autoPlay muted src="img/CVAI-2855LAO26_CRA31.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2855LAO26_CRA31Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2858LAO51_CRA9Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2858LAO51_CRA9" loop playsinline autoPlay muted src="img/CVAI-2858LAO51_CRA9.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2858LAO51_CRA9Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="video-compare-container" id="CVAI-2859RAO3_CRA39Div" style="width: 100%;">
+                            <video class="video" id="CVAI-2859RAO3_CRA39" loop playsinline autoPlay muted src="img/CVAI-2859RAO3_CRA39.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="CVAI-2859RAO3_CRA39Merge" style="width: 100%;"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <!-- <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel"> -->
+          
+                  <!-- <div class="item">
+                    <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5625">
+                      <div class="video">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                          <source src="./img/CVAI-2828RAO2_CRA32_rgb.mp4" type="video/mp4">
+                        </video> 
+                      </div>
+                      <div class="video">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                          <source src="./img/CVAI-2828RAO2_CRA32_mask.mp4" type="video/mp4">
+                        </video> 
+                      </div>
+                    </div>
+                  </div> -->
+          
+                  <!-- <div class="item">
+                    <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5625">
+                      <div class="desc">Real-World Video</div>
+                      <div class="video">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                          <source src="./img/CVAI-2829RAO9_CRA37_rgb.mp4" type="video/mp4">
+                        </video> 
+                      </div>
+                      <div class="video">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                          <source src="./img/CVAI-2829RAO9_CRA37_mask.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+          
+                </div>
+            </div>
+          </section> -->
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
