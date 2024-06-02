@@ -104,7 +104,7 @@
                     </li>
                     <li>
                         <a href="">
-                            Chih Yao Hu²
+                            Chih-Yao Hu²
                         </a>
                     </li>
                     <li>
@@ -119,7 +119,7 @@
                     </li><br>
                     <li>
                         <a href="">
-                            Yuyou-chen¹
+                            Yu-You chen¹
                         </a>
                     </li>
                     <li>
@@ -452,15 +452,109 @@
                 </div>
                 <div>
                     <div class="col-xs-4 col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
-                        <a href="https://github.com/AISIGSJTU/SSVS"><b>XCAD</b></a>
+                        <a href="https://github.com/AISIGSJTU/SSVS"><u>XCAD</u></a>
                     </div>
                     <div class="col-xs-4 col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
-                        <a href="https://data.mendeley.com/datasets/p9bpx9ctcv/2"><b>CADICA</b></a>
+                        <a href="https://data.mendeley.com/datasets/p9bpx9ctcv/2"><u>CADICA</u></a>
                     </div>
                     <div class="col-xs-4 col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
                         <b>Our XACV dataset</b>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Quantitative evaluation
+                </h3>
+                <div style="overflow-x: auto;">
+                <table style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+                            <th class="tb-element" style="text-align:left;">Category</th>
+                            <th class="tb-element" style="text-align:left;">Input</th>
+                            <th class="tb-element" style="text-align:left;">Method</th>
+                            <th class="tb-element" style="text-align:center;">clDice</th>
+                            <th class="tb-element" style="text-align:center;">NSD</th>
+                            <th class="tb-element" style="text-align:center;">Jaccard</th>
+                            <th class="tb-element" style="text-align:center;">Dice</th>
+                            <th class="tb-element" style="text-align:center;">Acc.</th>
+                            <th class="tb-element" style="text-align:center;">Sn.</th>
+                            <th class="tb-element" style="text-align:center;">Sp.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid black;">
+                            <td class="tb-element" style="text-align:left;">T</td>
+                            <td class="tb-element" style="text-align:left;">Image</td>
+                            <td class="tb-element" style="text-align:left;">
+                                Hessian
+                            </td>
+                            <td class="tb-element" style="text-align:center;">0.577</td>
+                            <td class="tb-element" style="text-align:center;">0.321</td>
+                            <td class="tb-element" style="text-align:center;">0.415</td>
+                            <td class="tb-element" style="text-align:center;">0.584</td>
+                            <td class="tb-element" style="text-align:center;">0.929</td>
+                            <td class="tb-element" style="text-align:center;">0.451</td>
+                            <td class="tb-element strong" style="text-align:center;">0.990</td>
+                        </tr>
+                            <td class="tb-element" style="text-align:left;" rowspan="3">SS</td>
+                            <td class="tb-element" style="text-align:left;" rowspan="3">Image</td>
+                            <td class="tb-element" style="text-align:left;">
+                                <a href="https://github.com/AISIGSJTU/SSVS">SSVS</a>
+                            </td>
+                            <td class="tb-element" style="text-align:center;">0.408</td>
+                            <td class="tb-element" style="text-align:center;">0.216</td>
+                            <td class="tb-element" style="text-align:center;">0.355</td>
+                            <td class="tb-element" style="text-align:center;">0.522</td>
+                            <td class="tb-element" style="text-align:center;">0.905</td>
+                            <td class="tb-element" style="text-align:center;">0.471</td>
+                            <td class="tb-element" style="text-align:center;">0.960</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-element" style="text-align:left;">
+                                <a href="https://github.com/boahK/DARL">DARL</a>
+                            </td>
+                            <td class="tb-element" style="text-align:center;">0.605</td>
+                            <td class="tb-element" style="text-align:center;">0.300</td>
+                            <td class="tb-element" style="text-align:center;">0.464</td>
+                            <td class="tb-element" style="text-align:center;">0.631</td>
+                            <td class="tb-element" style="text-align:center;">0.929</td>
+                            <td class="tb-element" style="text-align:center;">0.547</td>
+                            <td class="tb-element" style="text-align:center;">0.978</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-element" style="text-align:left;">
+                                <a href="https://github.com/TY-Shi/FreeCOS">FreeCOS</a>
+                            </td>
+                            <td class="tb-element" style="text-align:center;">0.639</td>
+                            <td class="tb-element" style="text-align:center;">0.461</td>
+                            <td class="tb-element" style="text-align:center;">0.506</td>
+                            <td class="tb-element" style="text-align:center;">0.660</td>
+                            <td class="tb-element" style="text-align:center;">0.941</td>
+                            <td class="tb-element" style="text-align:center;">0.554</td>
+                            <td class="tb-element" style="text-align:center;">0.988</td>
+                        </tr>
+                        <tr style="border-top: 1px solid black; border-bottom: 2px solid black;">
+                            <td class="tb-element" style="text-align:left;">U</td>
+                            <td class="tb-element" style="text-align:left;">Video</td>
+                            <td class="tb-element" style="text-align:left;"><strong>DeNVeR(Ours)</strong></td>
+                            <td class="tb-element strong" style="text-align:center;">0.704</td>
+                            <td class="tb-element strong" style="text-align:center;">0.515</td>
+                            <td class="tb-element strong" style="text-align:center;">0.584</td>
+                            <td class="tb-element strong" style="text-align:center;">0.733</td>
+                            <td class="tb-element strong" style="text-align:center;">0.947</td>
+                            <td class="tb-element strong" style="text-align:center;">0.656</td>
+                            <td class="tb-element" style="text-align:center;">0.985</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                         
+                Method categories: T: traditional, SS: Self-supervised, U: unsupervised.
             </div>
         </div>
 
@@ -487,11 +581,8 @@
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
 @article{wu2024denver,
-    title={DeNVeR: Deformable Neural Vessel Representations for 
-           Unsupervised Video Vessel Segmentation},
-    author={Chun-Hung Wu and Shih-Hong Chen and Chih Yao Hu and Hsin-Yu Wu and 
-            Kai-Hsin Chen and Yuyou-chen and Chih-Hai Su and Chih-Kuo Lee and 
-            Yu-Lun Liu},
+    title={DeNVeR: Deformable Neural Vessel Representations for Unsupervised Video Vessel Segmentation},
+    author={Chun-Hung Wu and Shih-Hong Chen and Chih Yao Hu and Hsin-Yu Wu and Kai-Hsin Chen and Yuyou-chen and Chih-Hai Su and Chih-Kuo Lee and Yu-Lun Liu},
     journal={arXiv},
     year={2024}
 }</textarea>

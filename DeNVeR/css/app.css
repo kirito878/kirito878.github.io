@@ -563,14 +563,24 @@ border-radius: 5px;
 
 .row-top-aligned {
   display: flex;
-  flex-wrap: wrap;  // Allows multiple items to wrap in the row
-  align-items: flex-start;  // Aligns items to the top of the container
+  flex-wrap: wrap;  /* Allows multiple items to wrap in the row */
+  align-items: flex-start;  /* Aligns items to the top of the container */
 }
 
 .column-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  // Aligns content inside each column to start from top
-  align-items: center;  // Centers items horizontally inside the column
-  width: 100%;  // Makes sure each column takes the full width of its container on smaller screens
+  justify-content: flex-start;  /* Aligns content inside each column to start from top */
+  align-items: center;  /* Centers items horizontally inside the column */
+  width: 100%;  /* Makes sure each column takes the full width of its container on smaller screens */
+}
+
+.tb-element {
+  padding-left: 5px;
+  vertical-align: middle; 
+}
+
+.tb-element.strong {
+  font-weight: bold;
+  color: red;
 }
