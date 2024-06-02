@@ -553,3 +553,24 @@ width: 100%;
 #interpolation-image-wrapper img {
 border-radius: 5px;
 } */
+
+.centered-content {
+  text-align: center; /* Aligns inner content text center */
+  display: flex;
+  justify-content: center; /* Centers flex items horizontally */
+  align-items: center; /* Centers flex items vertically (if needed) */
+}
+
+.row-top-aligned {
+  display: flex;
+  flex-wrap: wrap;  // Allows multiple items to wrap in the row
+  align-items: flex-start;  // Aligns items to the top of the container
+}
+
+.column-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  // Aligns content inside each column to start from top
+  align-items: center;  // Centers items horizontally inside the column
+  width: 100%;  // Makes sure each column takes the full width of its container on smaller screens
+}

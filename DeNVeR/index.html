@@ -66,7 +66,7 @@
 
     <script src="js/app.js"></script>
     <script src="js/video_comparison.js"></script>
-    <script src="js/bulma-carousel.min.js"></script>
+    <script src="js/bulma-carousel.js"></script>
     <script src="js/bulma-slider.min.js"></script>
     <script src="js/index.js"></script>
 
@@ -198,28 +198,28 @@
               <div class="container">
                 <div id="results-carousel" class="carousel results-carousel">
 
-                    <div class="item">
+                    <div class="item item-CVAI-2828RAO2_CRA32">
                         <div class="video-compare-container" id="CVAI-2828RAO2_CRA32Div" style="width: 100%;">
                             <video class="video" id="CVAI-2828RAO2_CRA32" loop playsinline autoPlay muted src="img/CVAI-2828RAO2_CRA32.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
                             <canvas height=0 class="videoMerge" id="CVAI-2828RAO2_CRA32Merge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="item item-CVAI-2829RAO9_CRA37">
                         <div class="video-compare-container" id="CVAI-2829RAO9_CRA37Div" style="width: 100%;">
                             <video class="video" id="CVAI-2829RAO9_CRA37" loop playsinline autoPlay muted src="img/CVAI-2829RAO9_CRA37.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
                             <canvas height=0 class="videoMerge" id="CVAI-2829RAO9_CRA37Merge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="item item-CVAI-2829RAO14_CAU37">
                         <div class="video-compare-container" id="CVAI-2829RAO14_CAU37Div" style="width: 100%;">
                             <video class="video" id="CVAI-2829RAO14_CAU37" loop playsinline autoPlay muted src="img/CVAI-2829RAO14_CAU37.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
                             <canvas height=0 class="videoMerge" id="CVAI-2829RAO14_CAU37Merge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="item item-CVAI-2832RAO7_CAU29">
                         <div class="video-compare-container" id="CVAI-2832RAO7_CAU29Div" style="width: 100%;">
                             <video class="video" id="CVAI-2832RAO7_CAU29" loop playsinline autoPlay muted src="img/CVAI-2832RAO7_CAU29.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
                             <canvas height=0 class="videoMerge" id="CVAI-2832RAO7_CAU29Merge" style="width: 100%;"></canvas>
@@ -372,65 +372,92 @@
         </div>
 
         <br>
+        <!-- <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <h3>XACV dataset</h3>
+                <div class="row">
+                    <div class="col-xs-6 col-md-2 text-center">
+                        <img src="img/XCAD_00897.jpg" class="img-responsive" alt="XCAD Image">
+                        <p class="visible-xs">Image</p>
+                    </div>
+                    <div class="col-xs-6 col-md-2 text-center">
+                        <img src="img/XCAD_00897_mask.jpg" class="img-responsive" alt="XCAD Ground Truth">
+                        <p class="visible-xs">Ground truth</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <a href="https://github.com/AISIGSJTU/SSVS"><b>XCAD</b></a>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <a href="https://data.mendeley.com/datasets/p9bpx9ctcv/2"><b>CADICA</b></a>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center">
+                        <b>Our XACV dataset</b>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     XACV dataset
                 </h3>
-                <div class="row">
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/XCAD_00897.jpg" height="125px">
+                <div style="overflow: hidden; ">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed white;">
+                        <img src="img/XCAD_00897.jpg" class="img-responsive">
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
-                        <img src="img/XCAD_00897_mask.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/XCAD_00897_mask.jpg" class="img-responsive">
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/rgb_p1v10_00031.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed white;">
+                        <img src="img/rgb_p1v10_00031.jpg" class="img-responsive">
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
-                        <img src="img/noGT.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/noGT.jpg" class="img-responsive">
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/Ours_00050.jpg" height="125px"">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 4px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00050.jpg" class="img-responsive">
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/Ours_00050_mask.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 4px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00050_mask.jpg" class="img-responsive">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/XCAD_17817.jpg" height="125px">
+                <div style="overflow: hidden;">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed white;">
+                        <img src="img/XCAD_17817.jpg" height="125px" class="img-responsive">
                         Image
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
-                        <img src="img/XCAD_17817_mask.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/XCAD_17817_mask.jpg" height="125px" class="img-responsive">
                         Ground truth
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/rgb_p2_v11_00029.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed white;">
+                        <img src="img/rgb_p2_v11_00029.jpg" height="125px" class="img-responsive">
                         Video frame
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
-                        <img src="img/noGT.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                        <img src="img/noGT.jpg" height="125px" class="img-responsive">
                         Ground truth
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/Ours_00074.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 4px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00074.jpg" height="125px" class="img-responsive">
                         Video frame
                     </div>
-                    <div class="col-md-2 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
-                        <img src="img/Ours_00074_mask.jpg" height="125px">
+                    <div class="col-xs-2 col-md-2 text-center" style="padding-right: 4px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                        <img src="img/Ours_00074_mask.jpg" height="125px" class="img-responsive">
                         Ground truth
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                <div>
+                    <div class="col-xs-4 col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
                         <a href="https://github.com/AISIGSJTU/SSVS"><b>XCAD</b></a>
                     </div>
-                    <div class="col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
+                    <div class="col-xs-4 col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px; border-right: 2px dashed #000;">
                         <a href="https://data.mendeley.com/datasets/p9bpx9ctcv/2"><b>CADICA</b></a>
                     </div>
-                    <div class="col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
+                    <div class="col-xs-4 col-md-4 text-center" style="padding-right: 2px; padding-left: 2px; margin-top: 2px; margin-bottom: 2px;">
                         <b>Our XACV dataset</b>
                     </div>
                 </div>
